@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Contact Us</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); /* Dark gradient background */
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ecf0f1; /* Light text color */
+        }
+        .contact-container {
+            background: #252525; /* Darker background for the form */
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5); /* Stronger shadow */
+            width: 100%;
+            max-width: 500px;
+            box-sizing: border-box;
+            border: 1px solid #3a3a3a; /* Subtle border */
+        }
+        .contact-form h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #3498db; /* Blue accent color */
+            font-size: 2rem;
+            position: relative;
+        }
+        .contact-form h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db 0%, #8e44ad 100%); /* Blue to purple gradient */
+            border-radius: 2px;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.6rem;
+            color: #bdc3c7; /* Lighter grey for labels */
+            font-weight: bold;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 0.9rem;
+            background: #3a3a3a; /* Dark input background */
+            border: 1px solid #555; /* Darker border */
+            border-radius: 8px;
+            font-size: 1.1rem;
+            color: #ecf0f1; /* Light text in inputs */
+            box-sizing: border-box;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .form-group input[type="text"]:focus,
+        .form-group input[type="email"]:focus,
+        .form-group textarea:focus {
+            border-color: #3498db; /* Blue focus border */
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3); /* Blue glowing shadow */
+            outline: none;
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .btn {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(90deg, #3498db 0%, #8e44ad 100%); /* Blue to purple gradient button */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+        .btn:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <form class="contact-form">
+            <h2>Contact Us (Dark)</h2>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Your full name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required placeholder="Write your message here..."></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+</body>
+</html>
